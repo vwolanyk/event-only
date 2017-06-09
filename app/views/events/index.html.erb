@@ -1,1 +1,20 @@
-events#index page
+<h1>Upcoming Events </h1>
+
+<% @events.each do |event| %>
+<div class="event">
+  <h3><%= link_to event.name, event_path(event) %></h3>
+
+  <p>
+    Location: <%= event.city %>
+  </p>
+  <p>
+    DATE: <%= event.date %>
+  </p>
+  <p>
+    Capacity: <%= event.capacity %>
+  </p>
+
+
+</div>
+
+<% end %>
