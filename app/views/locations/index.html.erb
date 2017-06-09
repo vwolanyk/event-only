@@ -1,1 +1,16 @@
-locations#index page
+<h1>Location Location Location</h1>
+
+<% @locations.each do |location| %>
+
+<div class="location">
+
+  <h3><%= location.name %></h3>
+
+  <h4>CITY: <%= location.city %></h4>
+
+  <p><%= location.description %> <br>
+    <%= link_to image_tag(location.image, class:"location"), location_path(location) %>
+  </p>
+</div>
+
+<% end %>
