@@ -1,3 +1,8 @@
 <h1><%= @event.name %> </h1>
 
+<!--EDIT DELETE FUNCTION  -->
 <%= link_to 'Edit', edit_event_path(@event) %> | <%= link_to 'Delete', events_path(@event),  method: :delete, data: {confirm: "You Sure you want to DELETE '#{@event.name}'?"}  %>
+
+<h3>LOCATION: <%= @event.city %></h3>
+<h4><%=@event.date %></h3>
+<p>Capacity: <%= @event.capacity %></p>
