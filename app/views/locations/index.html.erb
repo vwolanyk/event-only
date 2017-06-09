@@ -2,15 +2,11 @@
 
 <% @locations.each do |location| %>
 
-<div class="location">
+
 
   <h3><%= location.name %></h3>
 
-  <h4>CITY: <%= location.city %></h4>
-
-  <p><%= location.description %> <br>
-    <%= link_to image_tag(location.image, class:"location"), location_path(location) %>
-  </p>
-</div>
+  <%= render 'single_location', location: location %>
+  
 
 <% end %>
