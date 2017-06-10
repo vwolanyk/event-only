@@ -1,12 +1,12 @@
 
-<%= form_for :event do |f| %>
+<%= form_for event do |f| %>
 
 <p>
   <%= f.label :date %>
   <%= f.date_field :date %>
 </p>
 
-<p>
+<!-- <p>
   <%= f.label :city %>
   <%= f.text_field :city %>
 </p>
@@ -14,13 +14,16 @@
 <p>
   <%= f.label :capacity %>
   <%= f.number_field :capacity %>
-</p>
+</p> -->
 
 <p>
   <%= f.label :name %>
   <%= f.text_field :name %>
 </p>
 
+<p>
 <%= f.submit %>
+</p>
+
 
 <% end %>
