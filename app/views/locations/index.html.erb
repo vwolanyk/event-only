@@ -2,13 +2,12 @@
 
 
 <p> <%= link_to 'Add New Location', new_location_path %> </p>
+
+
 <% @locations.each do |location| %>
-
-
 
   <h3><%= location.name %></h3>
 
   <%= render 'single_location', location: location, show_location: false %>
-
 
 <% end %>

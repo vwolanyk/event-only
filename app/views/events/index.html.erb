@@ -1,22 +1,26 @@
-<h1>Upcoming Events </h1>
+<!-- INDEX of All events  -->
+<!-- Features: Add Event link Click Event name for single view -->
 
+<h1>Events </h1>
+
+<!-- Link to Add event  -->
 <%= link_to 'Add Event', new_event_path %>
 
+<!-- iterate through all events and show each  -->
 <% @events.each do |event| %>
 <div class="event">
+
   <h3><%= link_to event.name, event_path(event) %></h3>
 
-  <!-- <p>
-    Location: <%= event.city %>
-  </p> -->
   <p>
     DATE: <%= event.date %>
   </p>
-  <!-- <p>
+
+<% if event.capacity != nil %>
+  <p>
     Capacity: <%= event.capacity %>
-  </p> -->
-
-
+  </p>
+<% end %>
 </div>
 
 <% end %>

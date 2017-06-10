@@ -1,0 +1,10 @@
+
+<!--EDIT DELETE FUNCTION  -->
+<%= link_to 'ALL EVENTS', events_path %>  | <%= link_to 'Edit', edit_event_path(@event) %> | <%= link_to 'Delete', event_path(@event) , method: :delete, data: {confirm: "You Sure you want to DELETE '#{@event.name}'?"}   %>
+
+<h4><%=event.date %></h3>
+
+<!-- Only Shows Capacity if entered -->
+<%if event.capacity != nil %>
+<p>Capacity: <%= event.capacity %></p>
+<% end %>
