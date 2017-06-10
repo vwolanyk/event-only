@@ -1,5 +1,7 @@
 <div class="location">
-
+  <% if show_location %>
+  <h1><%=location.name%></h1>
+  <% end %>
   <h3>City: <%= location.city %></h3>
 
   <%= location.description %> <br>
