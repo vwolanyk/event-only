@@ -1,7 +1,48 @@
 
-<p>
-  <%= link_to 'View Locations', locations_path %>
-</p>
-<p>
+<div class="">
+  <%= link_to 'View Locations', locations_path %> |
   <%= link_to 'Events', events_path %>
-</p>
+
+</div>
+
+  <div class="home-column left" >
+    <h1><%= link_to 'Events', events_path %></h1>
+
+    <%= link_to 'Add Event', new_event_path %>
+
+    <% @events.each do |event| %>
+    <div class="event">
+      <h3><%= link_to event.name, event_path(event) %></h3>
+
+      <!-- <p>
+        Location: <%= event.city %>
+      </p> -->
+      <p>
+        DATE: <%= event.date %>
+      </p>
+      <!-- <p>
+        Capacity: <%= event.capacity %>
+      </p> -->
+
+
+    </div>
+
+    <% end %>
+  </div>
+
+  <div class="home-column right">
+    <h1><%=link_to 'Locations', locations_path %></h1>
+
+
+    <p> <%= link_to 'Add New Location', new_location_path %> </p>
+    <% @locations.each do |location| %>
+
+
+
+      <h3><%= location.name %></h3>
+
+      <%= render 'single_location', location: location %>
+
+
+    <% end %>
+  </div>
